@@ -46,7 +46,7 @@ public class AccountVerificationController {
 			score.setVal(45);
 		if(reqcompany.getQuoteAmount() >= 50000 && reqcompany.getQuoteAmount() <= 75000 )
 			score.setVal(65);
-		else
+		if(reqcompany.getQuoteAmount() < 50000)
 			score.setVal(85);
 		
 		//return ResponseEntity.ok(gson.toJson("This is a String"));
